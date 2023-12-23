@@ -1,3 +1,42 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
 .shark-icon {
     font-family: 'Pixelify Sans', sans-serif;
+}
+
+.main-section{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.main-section > h1 {
+    position: absolute;
+}
+
+.custom-btn1 {
+    background-color: white;
+    height: 45px;
+    width: 55px;
+
+}
+
+
+.blog-list {
+    display: flex;
+    align-self: center;
+    height: 90vh;
+    width: 120vh;
+    border: 10px black solid;
+    border-radius: 5%;
+    border-width: thin;
+    justify-content: center;
+
+    margin-top: 20px;
+}
+
+.blog-list > h1 {
+    margin-top: 10px;
 }

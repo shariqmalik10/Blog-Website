@@ -1,1 +1,17 @@
 <%- include('partials/navbar.ejs') %>
+
+
+<div class="main-section">
+    <h1>Hello User X!</h1>
+    <div class="blog-list">
+        <% if (locals.newPostName) { %>
+            <h1>Blogs displayed by User X</h1>
+            <h1><%= locals.newPostName%></h1>
+        <% } else {%>
+            <h1>No blogs to display</h1>
+        <% } %>
+    </div>
+    
+</div>
+
+<%- include('partials/footer.ejs') %>
