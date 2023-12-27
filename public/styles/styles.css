@@ -27,7 +27,7 @@
     display: flex;
     align-self: center;
     height: 90vh;
-    width: 120vh;
+    width: 130vh;
     border: 10px black solid;
     border-radius: 5%;
     border-width: thin;
@@ -63,5 +63,25 @@
 
 .sub-btn {
     text-align: center;
-    
 }
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.options > h1 {
+    margin-left: 251px;
+}
+
+.option-btns{
+    display: flex;
+    margin-right: 251px;
+}
+
+
+.sub-btn {
+    background-color: yellow;
+}
+

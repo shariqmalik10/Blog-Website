@@ -1,8 +1,18 @@
 <%- include('partials/navbar.ejs') %>
 
+<div class="options">
+    <h1>Hello User X</h1>
+    <div class="option-btns">
+        <form action="/blog-form" method="GET">
+            <button class="sub-btn btn btn-primary" type="submit">Add</button>
+        </form>
+    </div>
+    
+</div>
+
+
 
 <div class="main-section">
-    <h1>Hello User X!</h1>
     <div class="blog-list">
         <% if (locals.title) { %>
             <h1>Blogs written by User X</h1><br>
