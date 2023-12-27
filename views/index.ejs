@@ -14,15 +14,16 @@
 
 <div class="main-section">
     <div class="blog-list">
-        <% if (locals.title) { %>
+        <% if (locals.blogEntries) { %>
             <h1>Blogs written by User X</h1><br>
-            <div class="blog">
-                <h1>Title</h1>
-                <h3><%= locals.title %></h3>
-                
-                <h1>Content</h1>
-                <p><%= locals.content %></p>
-            </div>
+            <% for( let index = 0; index < locals.blogEntries.length; index++ ) { %>
+                <div class="blog">
+                    <h3 class="blog-title"><%= locals.blogEntries[index].title %></h3>
+                    <!-- <h1>Content</h1> -->
+                    <p class="blog-content"><%= locals.blogEntries[index].content %></p>
+                </div>
+            <% } %>
+            
         <% } else {%>
             <h1>No blogs to display</h1>
         <% } %>
