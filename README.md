@@ -9,4 +9,7 @@ A preview will be available soon once I host the website on Netlify (cannot host
 - [ ] improving the design and placement of the add button
 - [ ] Adding a login system 
 - [ ] Doing a complete rehaul of the UI once I learn React 
+- [ ] Add the ability to continue writing on the next line
+- [ ] Make the text area for content writing dynamic 
+- [ ] Add a line to add date to each post 
 
