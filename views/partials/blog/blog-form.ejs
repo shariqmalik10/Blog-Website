@@ -1,20 +1,16 @@
 <%- include('/Users/shariqmalik/Documents/Web Dev Bootcamp/Blog Website/views/partials/navbar.ejs') %>
     
-    <h1 class="new-entry">New Entry</h1>
+   
     
-
-    <form action="/submit-form" method="POST">
-        <div class="main-qs">
-            <label for="title">Title</label><br>
-            <input type="text" id="title" name="title"><br>
-            <label for="content">Content</label><br>
-            <input type="text" id="content" name="content">
-
-            <input type="submit" class="btn btn-primary sub-btn" value="Submit">
-            
-        </div>
-        
-        
-    </form>
+    <div class="main-qs">
+        <form action="/submit-form" class="new-form" method="POST">
+            <h1 class="new-entry">New Entry</h1>
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title">
+            <label for="content">Content</label>
+            <textarea class="auto-resize" id="content" name="content"></textarea>
+            <input type="submit" class="btn btn-primary" value="Submit">
+        </form>
+    </div>
     
 <%- include('/Users/shariqmalik/Documents/Web Dev Bootcamp/Blog Website/views/partials/footer.ejs') %>

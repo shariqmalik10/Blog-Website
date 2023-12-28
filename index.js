@@ -9,6 +9,8 @@ const port = 3000;
 var title = "";
 var content = "";
 
+var index = 0;
+
 //creating a object array to store all the blogs created 
 function BlogEntry (title, content) {
     this.content = content;
@@ -35,9 +37,10 @@ app.get("/blog-form", (req,res) => {
 app.post("/submit-form", (req, res) => {
     title = req.body["title"];
     content = req.body["content"];
-
+    
     //add the new entry to the array 
-    blogEntries.push({"title": title, "content": content});
+    blogEntries.push({"index": index,"title": title, "content": content});
+    index = index + 1;
     res.redirect('/');
 
     //reset the values
@@ -45,6 +48,34 @@ app.post("/submit-form", (req, res) => {
     content = "";
 })
 
+//edit function 
+app.post("/edit-blog-form", (req, res) => {
+    const blogIndex = req.body.blogIndex;
+    const blogData = blogEntries[blogIndex];
+
+    console.log(blogData);
+    res.render(__dirname + "/views/partials/blog/update-blog.ejs", {blogData: blogData})
+
+})
+
+app.post("/update-blog", (req, res) => {
+    const updatedTitle = req.body["title"];
+    const updatedContent = req.body["content"];
+    const blogIndex = req.body["blogIndex"];
+
+    blogEntries[blogIndex].title = updatedTitle;
+    blogEntries[blogIndex].content = updatedContent;
+    res.redirect("/");
+})
+
+//delete blog entry 
+
+app.post("/delete-blog", (req, res) => {
+    const blogIndex = req.body.blogIndex;
+    blogEntries.splice(blogIndex, 1);
+
+    res.redirect("/");
+})
 
 
 app.listen(port, () => {

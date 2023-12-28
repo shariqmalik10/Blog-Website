@@ -1,0 +1,19 @@
+<%- include('/Users/shariqmalik/Documents/Web Dev Bootcamp/Blog Website/views/partials/navbar.ejs') %>
+
+<div class="edit-main">
+    <!-- Edit Blog Form -->
+    <form action="/update-blog" class="new-form" method="POST">
+        <input type="hidden" name="blogIndex" value="<%= locals.blogData.index %>"> <!-- Include hidden input for blog index -->
+
+        <h1 class="new-entry">Edit Entry</h1>
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" value="<%= blogData.title %>">
+        <label for="content">Content:</label>
+        <textarea id="content" name="content"><%= blogData.content %></textarea>
+        <input type="submit" class="btn btn-primary" value="Update">
+    </form>
+</div>
+
+
+
+<%- include('/Users/shariqmalik/Documents/Web Dev Bootcamp/Blog Website/views/partials/footer.ejs') %>

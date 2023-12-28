@@ -1,7 +1,6 @@
 <%- include('partials/navbar.ejs') %>
 
 <div class="options">
-    <h1>Hello User X</h1>
     <div class="option-btns">
         <form action="/blog-form" method="GET">
             <button class="sub-btn btn btn-primary" type="submit">Add</button>
@@ -11,7 +10,6 @@
 </div>
 
 
-
 <div class="main-section">
     <div class="blog-list">
         <% if (locals.blogEntries) { %>
@@ -19,8 +17,21 @@
             <% for( let index = 0; index < locals.blogEntries.length; index++ ) { %>
                 <div class="blog">
                     <h3 class="blog-title"><%= locals.blogEntries[index].title %></h3>
+                 
+                    <form action="/edit-blog-form" method="POST">
+                        <input type="hidden" name="blogIndex" value="<%= index %>">
+                        <button class="edit-btn btn btn-link" type="submit">Edit</button>
+                    </form>
+
+                    <form class="delete-btn" action="/delete-blog" method="POST">
+                        <input type="hidden" name="blogIndex" value="<%= index %>">
+                        <button class="btn btn-link" type="submit">Delete</button>
+                    </form>
+    
                     <!-- <h1>Content</h1> -->
                     <p class="blog-content"><%= locals.blogEntries[index].content %></p>
+
+                    
                 </div>
             <% } %>
             

@@ -23,13 +23,13 @@
 
 }
 
-.sub-btn {
+/* .sub-btn {
     text-align: center;
-}
+} */
 
 .options {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
 }
 
@@ -39,22 +39,19 @@
 
 .option-btns{
     display: flex;
-    margin-right: 251px;
 }
 
 /* Making the blog tings innit fam */
 .blog-list {
     display: flex;
     align-items: center;
-    height: 90vh;
-    width: 130vh;
-    border: 10px black solid;
+    height: 100vh;
+    /* width: 80%; */
+    /* border: 10px black solid;
     border-radius: 5%;
-    border-width: thin;
+    border-width: thin; */
     /* justify-content: space-between; */
-
     flex-direction: column;
-
     margin-top: 20px;
 }
 
@@ -63,12 +60,12 @@
     align-self: center;
 }
 
-.blog {
+/* .blog {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
-    width: 90vh;
-    height: 9vh;
+    /* justify-content: space-between; 
+    width:  70vw;
+    height: auto;
     border: 3px black solid;
     border-radius: 30px;
 
@@ -77,16 +74,42 @@
 
 .blog-title {
     font-size: 24px;
-    margin-left: 15px;
+    padding-left: 15px;
+    padding-top: 10px;
 }
 
 .blog-content {
-    margin-left: 15px;
-    margin-top: 15px;
+    padding-left: 15px;
+    padding-top: 15px;
 }
- 
+
+.blog-op {
+    display: flex;
+    justify-content: right;
+} */
+
+.blog {
+    display: grid;
+    grid-template-columns: 70vw 1fr;
+    grid-template-rows: auto 1fr;
+
+    border: 4px black solid;
+    border-radius: 30px;
+
+    margin-top: 10px;
+    padding-right: 11px;
+    padding-top: 5px;
+    padding-left: 7px;
+}
+
+.delete-btn {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+
 /* Blog data entry */
-.new-entry {
+/* .new-entry {
     text-align: left;
     margin-left: 244px;
 }
@@ -103,4 +126,60 @@
 
 .sub-btn {
     margin-top: 30px;
+} */
+
+/* New form entry */
+.new-entry {
+    text-align: center;
+    grid-row: 1;
 }
+
+.main-qs {
+    display: flex;
+    justify-content: center;
+}
+
+.new-form{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr; 
+    grid-gap: 16px;
+
+    margin-top: 10px;
+}
+
+label {
+    grid-column: 1 / 2;
+}
+
+input,
+button {
+    grid-column: 2 / 3;
+}
+
+textarea.auto-resize {
+    resize: none; /* Prevents manual resizing by the user */
+    overflow: hidden; /* Hides any content that exceeds the visible area */
+    min-height: 50px; /* Set a minimum height */
+    width: 100%; /* Make the textarea fill its container */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+    padding: 10px; /* Optional: Adjust padding as needed */
+    border: 1px solid #ccc; /* Optional: Add a border for clarity */
+}
+
+/* Edit Form */
+
+.edit-main {
+    display: flex;
+    justify-content: center;
+}
+
+.footer {
+    margin-top: 600px;
+    text-align: center;
+}
+
+
+
+
+
+
