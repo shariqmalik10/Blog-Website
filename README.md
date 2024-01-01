@@ -3,7 +3,7 @@ This is a website that can be used to read and write blogs. It is currently at a
 The website is designed using CSS, EJS, NodeJS+ExpressJS  
 A preview will be available soon once I host the website on Netlify (cannot host on GitHub pages as it only hosts static websites hence no support for server side rendering). 
 
-### Stuff that needs to be worked on 
+### Stuff that needs to be worked on. 2024 is gonna be good :)
 
 - [ ] Integrating PostGres to be used to store the data for each user's blog entry 
 - [ ] improving the design and placement of the add button

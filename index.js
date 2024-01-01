@@ -73,7 +73,6 @@ app.post("/update-blog", (req, res) => {
 app.post("/delete-blog", (req, res) => {
     const blogIndex = req.body.blogIndex;
     blogEntries.splice(blogIndex, 1);
-
     res.redirect("/");
 })
 
